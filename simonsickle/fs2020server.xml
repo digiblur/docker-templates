@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FarmingSimulator22Server</Name>
+  <Repository>toetje585/docker-winebased-server-fs22</Repository>
+  <Registry>https://hub.docker.com/r/toetje585/docker-winebased-server-fs22</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/wine-gameservers/docker-winebased-server-fs22</Project>
+  <Overview/>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1642213376</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>10823</HostPort>
+        <ContainerPort>10823</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10823</HostPort>
+        <ContainerPort>10823</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/FarmingSimulator22Server</HostDir>
+      <ContainerDir>/installer_files</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>USERNAME</Value>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>FS22USER</Value>
+      <Name>VNC_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>FS22USER</Value>
+      <Name>WEB_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>FS22USER</Value>
+      <Name>WEB_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Docker</Value>
+      <Name>SERVER_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>FS22USER</Value>
+      <Name>SERVER_ADMIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>FS22USER</Value>
+      <Name>SERVER_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>16</Value>
+      <Name>SERVER_PLAYERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10823</Value>
+      <Name>10823</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>MapUS</Value>
+      <Name>SERVER_MAP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3</Value>
+      <Name>SERVER_DIFFICULTY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>SERVER_PAUSE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>180.000000</Value>
+      <Name>SERVER_SAVE_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>31536000</Value>
+      <Name>SERVER_STATS_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>SERVER_CROSSPLAY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Game Server" Target="10823" Default="10823" Mode="tcp" Description="Container Port: 10823" Type="Port" Display="always" Required="true" Mask="false">10823</Config>
+  <Config Name="Game Server" Target="10823" Default="10823" Mode="udp" Description="Container Port: 10823" Type="Port" Display="always" Required="true" Mask="false">10823</Config>
+  <Config Name="USERNAME" Target="USERNAME" Default="FS22USER" Mode="" Description="Container Variable: USERNAME" Type="Variable" Display="always" Required="true" Mask="false">USERNAME</Config>
+  <Config Name="Install Path" Target="/installer_files" Default="/mnt/user/appdata/FarmingSimulator22Server" Mode="rw" Description="Container Path: /installer_files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/FarmingSimulator22Server</Config>
+  <Config Name="VNC_PASSWORD" Target="VNC_PASSWORD" Default="FS22USER" Mode="" Description="Container Variable: VNC_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">FS22USER</Config>
+  <Config Name="WEB_USERNAME" Target="WEB_USERNAME" Default="FS22USER" Mode="" Description="Container Variable: WEB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">FS22USER</Config>
+  <Config Name="WEB_PASSWORD" Target="WEB_PASSWORD" Default="FS22USER" Mode="" Description="Container Variable: WEB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">FS22USER</Config>
+  <Config Name="SERVER_NAME" Target="SERVER_NAME" Default="Docker" Mode="" Description="Container Variable: SERVER_NAME" Type="Variable" Display="always" Required="false" Mask="false">Docker</Config>
+  <Config Name="SERVER_ADMIN" Target="SERVER_ADMIN" Default="FS22USER" Mode="" Description="Container Variable: SERVER_ADMIN" Type="Variable" Display="always" Required="false" Mask="false">FS22USER</Config>
+  <Config Name="SERVER_PASSWORD" Target="SERVER_PASSWORD" Default="FS22USER" Mode="" Description="Container Variable: SERVER_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">FS22USER</Config>
+  <Config Name="SERVER_PLAYERS" Target="SERVER_PLAYERS" Default="16" Mode="" Description="Container Variable: SERVER_PLAYERS" Type="Variable" Display="always" Required="false" Mask="false">16</Config>
+  <Config Name="SERVER_PORT" Target="10823" Default="10823" Mode="" Description="Container Variable: 10823" Type="Variable" Display="always" Required="false" Mask="false">10823</Config>
+  <Config Name="SERVER_MAP" Target="SERVER_MAP" Default="MapUS" Mode="" Description="Container Variable: SERVER_MAP" Type="Variable" Display="always" Required="false" Mask="false">MapUS</Config>
+  <Config Name="SERVER_DIFFICULTY" Target="SERVER_DIFFICULTY" Default="3" Mode="" Description="Container Variable: SERVER_DIFFICULTY" Type="Variable" Display="always" Required="false" Mask="false">3</Config>
+  <Config Name="SERVER_PAUSE" Target="SERVER_PAUSE" Default="1" Mode="" Description="Container Variable: SERVER_PAUSE" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="SERVER_SAVE_INTERVAL" Target="SERVER_SAVE_INTERVAL" Default="180.000000" Mode="" Description="Container Variable: SERVER_SAVE_INTERVAL" Type="Variable" Display="always" Required="false" Mask="false">180.000000</Config>
+  <Config Name="SERVER_STATS_INTERVAL" Target="SERVER_STATS_INTERVAL" Default="31536000" Mode="" Description="Container Variable: SERVER_STATS_INTERVAL" Type="Variable" Display="always" Required="false" Mask="false">31536000</Config>
+  <Config Name="SERVER_CROSSPLAY" Target="SERVER_CROSSPLAY" Default="true" Mode="" Description="Container Variable: SERVER_CROSSPLAY" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="tzdata" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="advanced-hide" Required="false" Mask="false">/etc/localtime</Config>
+</Container>
