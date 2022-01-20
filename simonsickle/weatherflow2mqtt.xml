@@ -52,11 +52,6 @@ Please review Breaking Changes prior to updating your instance. Breaking changes
   </Data>
   <Environment>
     <Variable>
-      <Value>America/New_York</Value>
-      <Name>TZ</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>imperial </Value>
       <Name>UNIT_SYSTEM</Name>
       <Mode/>
@@ -135,7 +130,6 @@ Please review Breaking Changes prior to updating your instance. Breaking changes
   <Labels/>
   <Config Name="appdata" Target="/data" Default="/mnt/user/appdata/weatherflow2mqtt" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/weatherflow2mqtt</Config>
   <Config Name="MQTT" Target="50222" Default="50222" Mode="udp" Description="Container Port: 50222" Type="Port" Display="advanced-hide" Required="true" Mask="false">50222</Config>
-  <Config Name="Timezone" Target="TZ" Default="America/New_York" Mode="" Description="Set your local Timezone. It is important that you use the right timezone here, or else some of the calculations done by the container will not be correct. Default Timezone is America/New_York (Required)" Type="Variable" Display="always" Required="true" Mask="false">America/New_York</Config>
   <Config Name="Unit System" Target="UNIT_SYSTEM" Default="metric" Mode="" Description="Enter imperial or metric. This will determine the unit system used when displaying the values. Default is metric" Type="Variable" Display="always" Required="false" Mask="false">imperial </Config>
   <Config Name="Language" Target="LANGUAGE" Default="en" Mode="" Description="Use this to set the language for Wind Direction cardinals and other sensors with text strings as state value. These strings will then be displayed in HA in the selected language. &#13;&#10;&#13;&#10;Currently these languages are supported for Wind Cardinals and other Text state strings:&#13;&#10;&#13;&#10;en: English&#13;&#10;da: Danish&#13;&#10;de: German&#13;&#10;fr: French" Type="Variable" Display="advanced" Required="true" Mask="false">en</Config>
   <Config Name="RAPID_WIND_INTERVAL" Target="RAPID_WIND_INTERVAL" Default="0" Mode="" Description=" The weather stations delivers wind speed and bearing every 2 seconds. If you don't want to update the HA sensors so often, you can set a number here (in seconds), for how often they are updated. Default is 0, which means data are updated when received from the station." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
