@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/simonsickle/docker-templates/master/images/profile.jpg</Icon>
+  <Profile>
+    Creating software that makes day to day life easier. Android engineer by trade.
+  </Profile>
+  <DonateLink>https://cash.app/$ssickle</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <Twitter>https://twitter.com/ssickle42</Twitter>
+</Maintainer>
