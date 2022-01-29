@@ -3,7 +3,7 @@
   <Name>weatherflow2mqtt</Name>
   <Repository>briis/weatherflow2mqtt:latest</Repository>
   <Registry>https://hub.docker.com/r/briis/weatherflow2mqtt</Registry>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -18,12 +18,12 @@ There is support for both the AIR &amp;amp; SKY devices and the TEMPEST device.&
 Please review Breaking Changes prior to updating your instance. Breaking changes will be listed in https://github.com/briis/hass-weatherflow2mqtt/blob/main/CHANGELOG.md See Breaking Changes section under [3.0.0] 2021-12-10 for steps to updating naming conventions.</Overview>
   <Category>HomeAutomation:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/simonsickle/docker-templates/master/simonsickle/weatherflow2mqtt.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/simonsickle/docker-templates/master/images/mqtt-logo.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1642723913</DateInstalled>
+  <DateInstalled>1643433658</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This project monitors the UDP socket (50222) from a WeatherFlow Hub, and publishes the data to a MQTT Server. Data is formatted in a way that, it supports the MQTT Discovery format for Home Assistant, so a sensor will created for each entity that WeatherFlow sends out, if you have MQTT Discovery enabled.&#xD;
@@ -34,7 +34,7 @@ There is support for both the AIR &amp;amp; SKY devices and the TEMPEST device.&
 &#xD;
 Please review Breaking Changes prior to updating your instance. Breaking changes will be listed in https://github.com/briis/hass-weatherflow2mqtt/blob/main/CHANGELOG.md See Breaking Changes section under [3.0.0] 2021-12-10 for steps to updating naming conventions.</Description>
   <Networking>
-    <Mode>bridge</Mode>
+    <Mode>host</Mode>
     <Publish/>
   </Networking>
   <Data>
@@ -44,33 +44,7 @@ Please review Breaking Changes prior to updating your instance. Breaking changes
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Environment>
-    <Variable>
-      <Value>0</Value>
-      <Name>RAPID_WIND_INTERVAL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>0.0.0.0</Value>
-      <Name>WF_HOST</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>50222</Value>
-      <Name>WF_PORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>False</Value>
-      <Name>MQTT_DEBUG</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>False</Value>
-      <Name>DEBUG</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
+  <Environment/>
   <Labels/>
   <Config Name="Unit System" Target="UNIT_SYSTEM" Default="metric" Mode="" Description="Enter imperial or metric. This will determine the unit system used when displaying the values. Default is metric" Type="Variable" Display="always" Required="false" Mask="false">imperial </Config>
   <Config Name="ELEVATION" Target="ELEVATION" Default="0" Mode="" Description="Set the hight above sea level for where the station is placed. This is used when calculating some of the sensor values. Station elevation plus Device height above ground. The value has to be in meters (meters = feet * 0.3048). Default is 0" Type="Variable" Display="always" Required="false" Mask="false">283.464</Config>
