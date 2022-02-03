@@ -23,7 +23,7 @@ Please review Breaking Changes prior to updating your instance. Breaking changes
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1643433658</DateInstalled>
+  <DateInstalled>1643930238</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This project monitors the UDP socket (50222) from a WeatherFlow Hub, and publishes the data to a MQTT Server. Data is formatted in a way that, it supports the MQTT Discovery format for Home Assistant, so a sensor will created for each entity that WeatherFlow sends out, if you have MQTT Discovery enabled.&#xD;
@@ -44,14 +44,90 @@ Please review Breaking Changes prior to updating your instance. Breaking changes
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Value>imperial </Value>
+      <Name>UNIT_SYSTEM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ELEVATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MQTT_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1883</Value>
+      <Name>MQTT_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>68196</Value>
+      <Name>STATION_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>STATION_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>30</Value>
+      <Name>FORECAST_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MQTT_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MQTT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>en</Value>
+      <Name>LANGUAGE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>RAPID_WIND_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0.0.0.0</Value>
+      <Name>WF_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>50222</Value>
+      <Name>WF_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>MQTT_DEBUG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>DEBUG</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
   <Config Name="Unit System" Target="UNIT_SYSTEM" Default="metric" Mode="" Description="Enter imperial or metric. This will determine the unit system used when displaying the values. Default is metric" Type="Variable" Display="always" Required="false" Mask="false">imperial </Config>
-  <Config Name="ELEVATION" Target="ELEVATION" Default="0" Mode="" Description="Set the hight above sea level for where the station is placed. This is used when calculating some of the sensor values. Station elevation plus Device height above ground. The value has to be in meters (meters = feet * 0.3048). Default is 0" Type="Variable" Display="always" Required="false" Mask="false">283.464</Config>
-  <Config Name="MQTT_HOST" Target="MQTT_HOST" Default="127.0.0.1" Mode="" Description="The IP address of your mqtt server. Even though you have the MQTT Server on the same machine as this Container, don't use 127.0.0.1 as this will resolve to an IP Address inside your container. Use the external IP Address. Default value is 127.0.0.1 (Required)" Type="Variable" Display="always" Required="true" Mask="false">192.168.4.3</Config>
+  <Config Name="ELEVATION" Target="ELEVATION" Default="0" Mode="" Description="Set the hight above sea level for where the station is placed. This is used when calculating some of the sensor values. Station elevation plus Device height above ground. The value has to be in meters (meters = feet * 0.3048). Default is 0" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT_HOST" Target="MQTT_HOST" Default="" Mode="" Description="The IP address of your mqtt server. Even though you have the MQTT Server on the same machine as this Container, don't use 127.0.0.1 as this will resolve to an IP Address inside your container. Use the external IP Address. Default value is 127.0.0.1 (Required)" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="MQTT_PORT" Target="MQTT_PORT" Default="1883" Mode="" Description="The Port for your mqtt server. Default value is 1883" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
   <Config Name="STATION_ID" Target="STATION_ID" Default="" Mode="" Description="Enter your Station ID for your WeatherFlow Station. Default value is blank." Type="Variable" Display="always" Required="false" Mask="false">68196</Config>
-  <Config Name="STATION_TOKEN" Target="STATION_TOKEN" Default="" Mode="" Description="Enter your personal access Token to allow retrieval of data. If you don't have the token login with your account and create the token. NOTE You must own a WeatherFlow station to get this token. Default value is blank" Type="Variable" Display="always" Required="false" Mask="false">ec829e5e-ad01-41bf-b98e-9f71bff08392</Config>
+  <Config Name="STATION_TOKEN" Target="STATION_TOKEN" Default="" Mode="" Description="Enter your personal access Token to allow retrieval of data. If you don't have the token login with your account and create the token. NOTE You must own a WeatherFlow station to get this token. Default value is blank" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="FORECAST_INTERVAL" Target="FORECAST_INTERVAL" Default="30" Mode="" Description="The interval in minutes, between updates of the Forecast data. Default value is 30 minutes." Type="Variable" Display="always" Required="false" Mask="false">30</Config>
   <Config Name="MQTT_USERNAME" Target="MQTT_USERNAME" Default="" Mode="" Description="The username used to connect to the mqtt server. Leave blank to use Anonymous connection. Default value is blank" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="MQTT_PASSWORD" Target="MQTT_PASSWORD" Default="" Mode="" Description="The password used to connect to the mqtt server. Leave blank to use Anonymous connection. Default value is blank" Type="Variable" Display="always" Required="false" Mask="false"/>
