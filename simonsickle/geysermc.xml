@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://git.nefald.fr/docker/geyser/-/issues</Support>
+  <Support>https://forums.unraid.net/topic/121687-support-simonsickle-geysermc/</Support>
   <Project>https://git.nefald.fr/docker/geyser</Project>
   <Overview>GeyserMC is a translation layer to allow bedrock and pocket edition versions to play with the java edition users. You must run the minecraft server with a mod manager and the Geyser plugin. AntiCheat can ban bedrock players incorrectly, you have been warned.</Overview>
   <Category>GameServers:</Category>
