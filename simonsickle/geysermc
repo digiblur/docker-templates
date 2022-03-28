@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>GeyserMC</Name>
+  <Repository>nefald/geysermc</Repository>
+  <Registry>https://hub.docker.com/r/nefald/geysermc</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://git.nefald.fr/docker/geyser/-/issues</Support>
+  <Project>https://git.nefald.fr/docker/geyser</Project>
+  <Overview>GeyserMC is a translation layer to allow bedrock and pocket edition versions to play with the java edition users. You must run the minecraft server with a mod manager and the Geyser plugin. AntiCheat can ban bedrock players incorrectly, you have been warned.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/simonsickle/docker-templates/blob/master/images/geyser.png?raw=true</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1648446165</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>GeyserMC is a translation layer to allow bedrock and pocket edition versions to play with the java edition users. You must run the minecraft server with a mod manager and the Geyser plugin. AntiCheat can ban bedrock players incorrectly, you have been warned.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>19132</HostPort>
+        <ContainerPort>19132</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>19132</HostPort>
+        <ContainerPort>19132</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/geysermc</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>OVERWRITE_CONFIG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>GeyserMC in Docker</Value>
+      <Name>BEDROCK_MOTD1</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Minecraft server (GeyserMC)</Value>
+      <Name>BEDROCK_MOTD2</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>DockerGeyserServer</Value>
+      <Name>BEDROCK_SERVERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>172.16.0.2</Value>
+      <Name>REMOTE_ADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>25565</Value>
+      <Name>REMOTE_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>offline</Value>
+      <Name>REMOTE_AUTH_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0.0.0.0</Value>
+      <Name>BEDROCK_ADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>19132</Value>
+      <Name>BEDROCK_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="OVERWRITE_CONFIG" Target="OVERWRITE_CONFIG" Default="false" Mode="" Description="Container Variable: OVERWRITE_CONFIG" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="BEDROCK_MOTD1" Target="BEDROCK_MOTD1" Default="" Mode="" Description="Container Variable: BEDROCK_MOTD1" Type="Variable" Display="always" Required="true" Mask="false">GeyserMC in Docker</Config>
+  <Config Name="BEDROCK_MOTD2" Target="BEDROCK_MOTD2" Default="Minecraft server (GeyserMC)" Mode="" Description="Container Variable: BEDROCK_MOTD2" Type="Variable" Display="always" Required="true" Mask="false">Minecraft server (GeyserMC)</Config>
+  <Config Name="BEDROCK_SERVERNAME" Target="BEDROCK_SERVERNAME" Default="DockerGeyserServer" Mode="" Description="Container Variable: BEDROCK_SERVERNAME" Type="Variable" Display="always" Required="true" Mask="false">DockerGeyserServer</Config>
+  <Config Name="REMOTE_ADDRESS" Target="REMOTE_ADDRESS" Default="" Mode="" Description="Address of the java server" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="REMOTE_PORT" Target="REMOTE_PORT" Default="25565" Mode="" Description="Port of the remote minecraft java server" Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="REMOTE_AUTH_TYPE" Target="REMOTE_AUTH_TYPE" Default="floodgate" Mode="" Description="The remote auth type for the java server. It must match 1:1 with the server settings. Options are: online, offline, and floodgate " Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="appdata" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/geysermc</Config>
+  <Config Name="BEDROCK_ADDRESS" Target="BEDROCK_ADDRESS" Default="0.0.0.0" Mode="" Description="Address to listen for bedrock connections. You should leave this alone unless you want to limit the IP that accepts these connections" Type="Variable" Display="advanced" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="gameport udp" Target="19132" Default="19132" Mode="udp" Description="Container Port: 19132" Type="Port" Display="advanced" Required="true" Mask="false">19132</Config>
+  <Config Name="gameport tcp" Target="19132" Default="19132" Mode="tcp" Description="Container Port: 19132" Type="Port" Display="advanced" Required="true" Mask="false">19132</Config>
+  <Config Name="BEDROCK_PORT" Target="BEDROCK_PORT" Default="19132" Mode="" Description="Container Variable: BEDROCK_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">19132</Config>
+</Container>
