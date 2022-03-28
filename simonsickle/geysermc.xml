@@ -13,11 +13,11 @@
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://github.com/simonsickle/docker-templates/blob/master/images/geyser.png?raw=true</Icon>
+  <Icon>https://raw.githubusercontent.com/simonsickle/docker-templates/1b833decd2a915f58be222f08682fef8f4a31a0b/images/geyser.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1648446165</DateInstalled>
+  <DateInstalled>1648447119</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>GeyserMC is a translation layer to allow bedrock and pocket edition versions to play with the java edition users. You must run the minecraft server with a mod manager and the Geyser plugin. AntiCheat can ban bedrock players incorrectly, you have been warned.</Description>
