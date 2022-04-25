@@ -46,7 +46,7 @@ Please review Breaking Changes prior to updating your instance. Breaking changes
   </Data>
   <Environment>
     <Variable>
-      <Value>imperial </Value>
+      <Value>imperial</Value>
       <Name>UNIT_SYSTEM</Name>
       <Mode/>
     </Variable>
@@ -122,7 +122,7 @@ Please review Breaking Changes prior to updating your instance. Breaking changes
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Unit System" Target="UNIT_SYSTEM" Default="metric" Mode="" Description="Enter imperial or metric. This will determine the unit system used when displaying the values. Default is metric" Type="Variable" Display="always" Required="false" Mask="false">imperial </Config>
+  <Config Name="Unit System" Target="UNIT_SYSTEM" Default="metric" Mode="" Description="Enter imperial or metric. This will determine the unit system used when displaying the values. Default is metric" Type="Variable" Display="always" Required="false" Mask="false">imperial</Config>
   <Config Name="ELEVATION" Target="ELEVATION" Default="0" Mode="" Description="Set the hight above sea level for where the station is placed. This is used when calculating some of the sensor values. Station elevation plus Device height above ground. The value has to be in meters (meters = feet * 0.3048). Default is 0" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="MQTT_HOST" Target="MQTT_HOST" Default="" Mode="" Description="The IP address of your mqtt server. Even though you have the MQTT Server on the same machine as this Container, don't use 127.0.0.1 as this will resolve to an IP Address inside your container. Use the external IP Address. Default value is 127.0.0.1 (Required)" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="MQTT_PORT" Target="MQTT_PORT" Default="1883" Mode="" Description="The Port for your mqtt server. Default value is 1883" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
